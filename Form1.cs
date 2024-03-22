@@ -48,12 +48,17 @@ namespace nugget2
            
             using (StreamWriter writer = new StreamWriter("C:\\Users\\Kryx\\Desktop\\eu4\\coding\\positions.txt"))
             {
-                writer.WriteLine("provinceID;provinceName;definitionX");
                 foreach (definition def in defLine)
                 {
-                    double defX = def.pixelX.Count == 0 ? 0 : def.pixelX.Average();
-                    double defY = def.pixelY.Count == 0 ? 0 : def.pixelY.Average();
-                    writer.WriteLine(def.provinceID + ";" + def.provinceName + ";" + (defX + ";" + (2048 - defY)));
+                    int defX = def.pixelX.Count == 0 ? 0 : Convert.ToInt32(def.pixelX.Average());
+                    int defY = def.pixelY.Count == 0 ? 0 : Convert.ToInt32(def.pixelY.Average());
+                    int defYPos = 2048 - defY;
+                    writer.WriteLine($"#{def.provinceName}");
+                    writer.WriteLine($"{def.provinceID}={{");
+                    writer.WriteLine($"\tposition={{\n\t\t {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 0.000 0.000 \n\t}}");
+                    writer.WriteLine("\trotation={\n\t\t0.000 0.000 0.000 0.000 0.000 0.000 0.000 \n\t}");
+                    writer.WriteLine("\theight={\n\t\t0.000 0.000 1.000 0.000 0.000 0.000 0.000 \n\t}");
+                    writer.WriteLine("}");
                 }
             }
 
