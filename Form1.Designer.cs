@@ -32,6 +32,8 @@
             openFileDialog1 = new OpenFileDialog();
             textBox1 = new TextBox();
             button2 = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            progressBar1 = new ProgressBar();
             SuspendLayout();
             // 
             // button1
@@ -66,11 +68,20 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(210, 260);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(348, 23);
+            progressBar1.TabIndex = 4;
+            progressBar1.Click += progressBar1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(progressBar1);
             Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(button1);
@@ -86,5 +97,7 @@
         private OpenFileDialog openFileDialog1;
         private TextBox textBox1;
         private Button button2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ProgressBar progressBar1;
     }
 }
