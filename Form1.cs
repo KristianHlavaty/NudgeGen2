@@ -3,7 +3,7 @@ using System.Windows.Forms;
 //for the background worker
 using System.ComponentModel;
 
-namespace nugget2
+namespace NudgeGen2
 {
     public partial class Form1 : Form
     {

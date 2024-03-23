@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace nugget2
+namespace NudgeGen2
 {
     public class definition
     {

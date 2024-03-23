@@ -1,4 +1,4 @@
-namespace nugget2
+namespace NudgeGen2
 {
     internal static class Program
     {
