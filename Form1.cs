@@ -74,11 +74,14 @@ namespace nugget2
         }
         private void ProcessBitmapAndGenerateFile()
         {
+            int bitmapHeight = 2048; // height of the bitmap 2048 is default
+
             using (Bitmap bitmap = (Bitmap)Image.FromFile("C:\\Users\\Kryx\\Desktop\\eu4\\coding\\provinces.bmp"))
             {
                 int width = bitmap.Width;
                 int height = bitmap.Height;
 
+                bitmapHeight = bitmap.Height;
                 // for reporting progress
                 int totalPixels = width * height;
                 int pixelsProcesssed = 0;
@@ -105,7 +108,7 @@ namespace nugget2
                 }
             }
             /* X – Maps 1:1.i.e.In CS4 the X co-ordinate will match the co-ordinate you put in the positions.tt
-             Y – From the width of your map, take the position within your image editor and subtract it from the width(i.e. 2048 – 755). */
+             Y – From the height of your map, take the position within your image editor and subtract it from the Height(i.e. 2048 – 755). */
 
             using (StreamWriter writer = new StreamWriter("C:\\Users\\Kryx\\Desktop\\eu4\\coding\\positions.txt"))
             {
@@ -113,7 +116,7 @@ namespace nugget2
                 {
                     int defX = def.pixelX.Count == 0 ? 0 : Convert.ToInt32(def.pixelX.Average());
                     int defY = def.pixelY.Count == 0 ? 0 : Convert.ToInt32(def.pixelY.Average());
-                    int defYPos = 2048 - defY;
+                    int defYPos = bitmapHeight - defY;
                     writer.WriteLine($"#{def.provinceName}");
                     writer.WriteLine($"{def.provinceID}={{");
                     writer.WriteLine($"\tposition={{\n\t\t {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 {defX}.000 {defYPos}.000 0.000 0.000 \n\t}}");
