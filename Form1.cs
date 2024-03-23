@@ -122,7 +122,7 @@ namespace nugget2
             /* X – Maps 1:1.i.e.In CS4 the X co-ordinate will match the co-ordinate you put in the positions.tt
              Y – From the height of your map, take the position within your image editor and subtract it from the Height(i.e. 2048 – 755). */
 
-            using (StreamWriter writer = new StreamWriter("C:\\Users\\Kryx\\Desktop\\eu4\\coding\\positions.txt"))
+            using (StreamWriter writer = new StreamWriter(".\\positions.txt"))
             {
                 foreach (definition def in defLine)
                 {
