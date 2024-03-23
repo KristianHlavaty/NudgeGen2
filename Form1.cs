@@ -44,6 +44,18 @@ namespace nugget2
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.ShowDialog();
+        }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+            // get the provinces.bmp file
+            string fileName = openFileDialog2.FileName;
+            textBox2.Text = fileName;
+        }
+        
         private void button2_Click(object sender, EventArgs e)
         {
             // init the progress bar
@@ -76,7 +88,7 @@ namespace nugget2
         {
             int bitmapHeight = 2048; // height of the bitmap 2048 is default
 
-            using (Bitmap bitmap = (Bitmap)Image.FromFile("C:\\Users\\Kryx\\Desktop\\eu4\\coding\\provinces.bmp"))
+            using (Bitmap bitmap = (Bitmap)Image.FromFile(textBox2.Text))
             {
                 int width = bitmap.Width;
                 int height = bitmap.Height;
@@ -132,6 +144,10 @@ namespace nugget2
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

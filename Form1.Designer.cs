@@ -34,6 +34,9 @@
             button2 = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
+            button3 = new Button();
+            textBox2 = new TextBox();
+            openFileDialog2 = new OpenFileDialog();
             SuspendLayout();
             // 
             // button1
@@ -60,11 +63,11 @@
             // 
             // button2
             // 
-            button2.Location = new Point(346, 289);
+            button2.Location = new Point(312, 289);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(154, 23);
             button2.TabIndex = 2;
-            button2.Text = "button2";
+            button2.Text = "generate positions.txt\r\n";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -76,11 +79,36 @@
             progressBar1.TabIndex = 4;
             progressBar1.Click += progressBar1_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(713, 62);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 5;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(12, 62);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(695, 23);
+            textBox2.TabIndex = 6;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // openFileDialog2
+            // 
+            openFileDialog2.FileName = "openFileDialog1";
+            openFileDialog2.FileOk += openFileDialog2_FileOk;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox2);
+            Controls.Add(button3);
             Controls.Add(progressBar1);
             Controls.Add(button2);
             Controls.Add(textBox1);
@@ -99,5 +127,8 @@
         private Button button2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ProgressBar progressBar1;
+        private Button button3;
+        private TextBox textBox2;
+        private OpenFileDialog openFileDialog2;
     }
 }
