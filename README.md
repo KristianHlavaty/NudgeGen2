@@ -6,14 +6,14 @@ Please follow the same format as is in the base game in the definitions.csv file
 
 This is the example:
 
-province;red;green;blue;x;x
-1;128;34;64;Stockholm;x
-2;0;36;128;Östergötland;x
-3;128;38;192;Småland;x
-4;0;40;255;Bergslagen;x
-5;128;42;0;Värmland;x
-6;0;44;64;Skåne;x
-7;129;46;128;Västergötland;x
+province;red;green;blue;x;x  
+1;128;34;64;Stockholm;x  
+2;0;36;128;Östergötland;x  
+3;128;38;192;Småland;x  
+4;0;40;255;Bergslagen;x  
+5;128;42;0;Värmland;x  
+6;0;44;64;Skåne;x  
+7;129;46;128;Västergötland;x  
 
 etc.
 
