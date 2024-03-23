@@ -41,11 +41,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(713, 32);
+            button1.Location = new Point(689, 32);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(99, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "definition.csv";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -58,7 +58,7 @@
             // 
             textBox1.Location = new Point(12, 32);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(695, 23);
+            textBox1.Size = new Size(671, 23);
             textBox1.TabIndex = 1;
             // 
             // button2
@@ -81,11 +81,11 @@
             // 
             // button3
             // 
-            button3.Location = new Point(713, 62);
+            button3.Location = new Point(689, 62);
             button3.Name = "button3";
-            button3.Size = new Size(75, 23);
+            button3.Size = new Size(99, 23);
             button3.TabIndex = 5;
-            button3.Text = "button3";
+            button3.Text = "provinces.bmp";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -93,7 +93,7 @@
             // 
             textBox2.Location = new Point(12, 62);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(695, 23);
+            textBox2.Size = new Size(671, 23);
             textBox2.TabIndex = 6;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
@@ -106,6 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(800, 450);
             Controls.Add(textBox2);
             Controls.Add(button3);
@@ -114,7 +115,7 @@
             Controls.Add(textBox1);
             Controls.Add(button1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "NudgeGen2";
             ResumeLayout(false);
             PerformLayout();
         }

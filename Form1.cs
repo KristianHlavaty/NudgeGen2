@@ -15,6 +15,9 @@ namespace nugget2
             backgroundWorker1.DoWork += backgroundWorker1_DoWork;
             backgroundWorker1.ProgressChanged += backgroundWorker1_ProgressChanged;
             backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
+
+            openFileDialog1.Filter = "CSV files (*.csv)|*.csv";
+            openFileDialog2.Filter = "Bitmap files (*.bmp)|*.bmp";
         }
         private void button1_Click(object sender, EventArgs e)
         {
