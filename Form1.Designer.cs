@@ -77,7 +77,6 @@
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(348, 23);
             progressBar1.TabIndex = 4;
-            progressBar1.Click += progressBar1_Click;
             // 
             // button3
             // 
@@ -95,7 +94,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(671, 23);
             textBox2.TabIndex = 6;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // openFileDialog2
             // 
